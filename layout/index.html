@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="pt-br">
+  
+  <head>
+    <!-- meta tags requeridas no Bootstrap-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Integração Bootstrap CSS para ficar amigável em dispositivos móveis -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <!-- Integração Bootstrap Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <!-- Integração Bootstrap Ícones para ícones do contato -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+
+    <!-- Customização de CSS por Guilherme Bressane  -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Trabalho </title>
+  </head>
+
+  <body>
+
+      <!--  Modal Login -->
+      <div class="modal fade" id="reg-modal-login" tabindex="-1" aria-labelledby="modal-title" arial-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal-title">Login</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" arial-label="Fechar"></button>
+            </div>
+
+            <div class="modal-body">
+              <label for="modal-email" class="form-label">Seu endereço de email:</label>
+              <input type="text" class="form-control" id="modal-email" placeholder="ex: seuemail@gmail.com">
+              <label class="form-label">Sua senha:</label>
+              <input type="password" class="form-control">
+            </div>
+
+            <div class="modal-footer">
+              <button class="btn btn-primary">Acessar</button>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+
+      <!-- FECHA Modal -->
+
+      <!--  Modal cadastro -->
+      <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" arial-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal-title">Faça seu Cadastro</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" arial-label="Fechar"></button>
+            </div>
+
+            <div class="modal-body">
+              <p>Para doar ou receber doações preencha os campos abaixo:</p>
+              <label class="form-label">Seu nome:</label>
+              <input type="text" class="form-control">
+              <label for="modal-email" class="form-label">Seu endereço de email:</label>
+              <input type="text" class="form-control" id="modal-email" placeholder="ex: seuemail@gmail.com">
+              <label class="form-label">Sua senha:</label>
+              <input type="password" class="form-control">
+              <label class="form-label">Confirme sua senha:</label>
+              <input type="password" class="form-control">
+            </div>
+
+            <div class="modal-footer">
+              <button class="btn btn-primary">Cadastrar</button>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+
+      <!-- FECHA Modal -->
+
+      
+      <!--  Modal donativo -->
+      <div class="modal fade" id="reg-modal-don" tabindex="-1" aria-labelledby="modal-title" arial-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal-title">Cadastre sua doação</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" arial-label="Fechar"></button>
+            </div>
+
+            <div class="modal-body">
+              <p>Unde eaque voluptatum temporibus. Facilis, unde!</p>
+              
+              <label class="form-label">O que será doado?</label>
+              <input type="text" class="form-control">
+              <label class="form-label">Especificações:</label>
+              <input type="text" class="form-control">
+              <label class="form-label">Local de retirada</label>
+              <input type="text" class="form-control">
+              <label class="form-label">Estado de conservação</label><br>
+              <input type="radio" id="vehicle" name="vehicle" value="Excelente">
+              <label for="vehicle1"> Excelente </label><br>
+              <input type="radio" id="vehicle" name="vehicle" value="Bom">
+              <label for="vehicle2"> Bom </label><br>
+              <input type="radio" id="vehicle" name="vehicle" value="Regular">
+              <label for="vehicle3"> Regular </label><br>
+              <input type="radio" id="vehicle" name="vehicle" value="Ruim">
+              <label for="vehicle3"> Ruim </label><br>
+              <br>
+              <form action="upload.php" method="post" enctype="multipart/form-data">
+                <p>Selecione até cinco imagens da sua doação: </p>
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input type="file" name="fileToUpload" id="fileToUpload">
+              </form>
+                          
+            </div>
+
+            <div class="modal-footer">
+              <button class="btn btn-primary">Enviar</button>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+
+      <!-- FECHA Modal -->
+
+      
+      <!-- ABRE MENU -->
+     
+      <nav class="navbar navbar-expand-lg"> 
+        <div class="container-fluid">
+          <div class="centraliza-menu">
+            <a class="navbar-brand" href="#">Boa Ação e Doação</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+              <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                  <a class="nav-link" href="" data-bs-target="#reg-modal" class="btn btn-primary" data-bs-toggle="modal">Cadastro</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="" data-bs-target="#reg-modal-don" class="btn btn-primary" data-bs-toggle="modal">Quero Doar</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Sobre</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contato</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="" data-bs-target="#reg-modal-login" class="btn btn-primary" data-bs-toggle="modal">Login</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="" aria-label="">
+                <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav> 
+      <!-- FECHA MENU -->
+
+    <div class="container"> <!-- abre container geral -->
+      <div class="container"> <!-- abre container destaque -->
+        <div class="separador"></div>
+        <div class="destaque">
+          <div class="row">
+            <div class="col-sm-8 destaque-home"><img src="./imagens/destaque-home.png" alt="destaque" /></div>
+            <div class="col-sm-4"><h2>LIXO PARA UNS, LUXO PARA OUTROS</h2>
+
+              <p>O que parece ser lixo para você, pode ser luxo para alguém. Vamos doar e reciclar! 
+              Aqui aparece de tudo: móveis, roupas, objetos de decoração, sobras de tecido, livros, revistas, entre outras preciosidades. Pode parecer lixo para você, mas alguém pode estar procurando exatamente aquilo!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div><!-- fecha container destaque -->
+     
+
+      <!-- ABRE SEÇÃO DONATIVOS -->
+      <section class="donativos">
+        <h1>Donativos</h1>
+        <br />
+        <div class="row">
+          <div class="col-sm-4">
+            <a href="https://sitedeartista.com.br/" target="_blank"><div class="relativo" class="port"><h4 class="titulo-port">Mesa Redonda</h4></div></a>
+          </div> 
+          <div class="col-sm-4">
+            <a href="https://amalgamacirco.art/" target="_blank"><div class="relativo" class="port"><h4 class="titulo-port">Armário 2 Portas</h4></div></a>
+          </div>
+          <div class="col-sm-4" >
+            <a href="http://circovox.com.br/" target="_blank"><div class="relativo" class="port"><h4 class="titulo-port">Cadeiras de Madeira</h4></div></a>
+          </div>
+        </div>
+        <br />
+        <div class="row"> 
+          <div class="col-sm-4">
+            <a href="https://circonobeco.com.br/" target="_blank"><div class="relativo" class="port"><h4 class="titulo-port">Cama de Solteiro</h4></div></a>
+          </div>
+          <div class="col-sm-4">
+            <a href="https://ciadorelativo.com/" target="_blank"><div class="relativo" class="port"><h4 class="titulo-port">Gaveteiro</h4></div></a>
+          </div>
+          <div class="col-sm-4">
+            <a href="https://acrobaciaearte.com.br/" target="_blank"><div class="relativo" class="port"><h4 class="titulo-port">Mesa de Alumínio</h4></div></a>
+          </div>
+        </div>
+      </section>
+      <h1>Quero Doar</h1>
+      <p>Para fazer sua doação é necessário se cadastrar em nosso sistema e fazer login. Uma vez logado,
+        você poderá acrescentar o seu donativo com fotos e descrição. Nossa equipe validará sua doação e
+        publicará no site. 
+      </p>
+      
+       <!-- Button trigger modal -->     
+       <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg-modal">
+        Cadastre-se para receber e doar
+      </button>
+
+        <!-- Button trigger modal -->     
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg-modal-don">
+        Quero fazer uma doação
+      </button>
+
+      <h1>Sobre</h1>
+      <p>Sabe aquela coisa que está parada tomando pó? Será que não está na hora de encaminhar para
+        alguém que dará mais valor? Queremos que tudo que seja reaproveitável não vá parar no lixão. Por
+        isso, a ideia de criar a plataforma, para que pessoas possam doar aquilo que não utilizam mais.
+        <br />
+        Sempre que possível, pedimos que publique a fotografia do objeto e SEMPRE deixe claro as condições
+        em que se encontra. Tudo bem doar quebrado, rasgado, sujo, contanto que a pessoa que vá buscar
+        saiba exatamente o que está indo retirar.
+        <br />
+        Os administradores trabalham voluntariamente pois este grupo não tem fins lucrativos. Somos apenas
+        uma ponte virtual para que as doações sejam possíveis.
+        <br />
+        Pedimos a gentileza de não se comprometerem com retirada caso não possam fazê-lo. Lembrem que
+        estão perdendo o tempo de alguém que está disposto a ajudar. Pessoas que cometam furos em
+        retirada sem justificativa serão excluídas do grupo.</p>
+        <br />
+        <br />
+      <footer>
+        <p>Portfólio criado para Projeto Integrador para a matéria "2202-PROJETO INTEGRADOR: DESENVOLVIMENTO DE SISTEMA WEB MODULARIZÁVEL do curso de Tecnologia em Sistemas para Internet do <a href="https://ead.senac.br/">Senac</a>. São Paulo, 11/09/2022.</p>
+        <h4>Referências de pesquisa para execução do projeto:</h4>
+        <ul>
+          <li><strong>SANTIAGO</strong>, Jefferson. Título: Web Standards. Editora Senac, São Paulo, 2016.</li>
+          <li><strong><a href="https://getbootstrap.com/">Bootstrap</a></strong>, https://getbootstrap.com/ acessado em 5/09/22.</li>
+          <li><strong><a href="https://www.w3schools.com/">W3schools</a></strong>, https://www.w3schools.com/ acessado em 5/09/22.</li>
+          <li><strong>Para baixar este projeto no <a href="https://github.com/guibressane/projetointegrador">Github</a></strong>, https://github.com/guibressane/projetointegrador</li>
+        </ul>
+      </footer>
+          
+    </div> <!-- Fecha Container -->
+  </body>
+</html>

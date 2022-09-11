@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  header, footer {
+   padding: 1em 3em 3em;
+  }
+
+  a {
+    color: teal;
+  }
+  
+  h1 {
+    margin: 1em 0 1em;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .navbar {
+    background-color: #3faf92;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+  }
+
+  
+  a.navbar-brand {
+    color:white;
+  }
+  
+
+  .nav-link {
+    color: white;
+  }
+
+  .nav-link:hover, .nav-link:active, .nav-link:focus {
+    color: #7fddc2;
+  }
+
+  .centraliza-menu {
+    width: 1112px;
+    margin: 0 auto;
+    
+  }
+
+  .navbar-brand {
+    float: left;
+  }  
+
+  .btn-outline-success {
+    background: white;
+    border-color: white;
+  } 
+
+  .btn-outline-success:hover {
+    background: #7fddc2;
+    border-color: #7fddc2;
+  } 
+
+  .form-label {
+    margin-top: 1rem;
+  }
+  
+  .separador {
+    padding-top: 80px;
+  }
+
+  .destaque {
+    background: #3faf92;
+  }
+
+  .destaque-home {
+     padding: 1em 2em;
+     width: 600px; 
+  }
+
+  .col-sm-4 {
+    padding: 2em;
+    color: white;
+  
+  }
+
+  .sobre {
+    padding: 2.5em;
+  }
+
+  .portfolio {
+    background: #eee;
+    padding: 2em;
+    margin-bottom: 1em;
+  }
+  
+  .portfolio a:hover {
+    background-color: teal;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    zoom: 1;
+  }
+
+  .portfolio h1 {
+   padding: 0.5em 0 0 0.5em;
+  }
+
+  .port {
+    margin: 1.5em 1em;
+  }
+
+  .titulo-port {
+    background-color: #fff;
+    padding: 1em;
+    float: left;
+    box-shadow: -8px 12px teal;
+    border: solid 2px teal;
+  }
+
+  .relativo {
+    background: url("https://portfolio.sitedeartista.com.br/wp-content/uploads/2020/09/cia-do-relativo.png") no-repeat -362px 41px;
+    height: 455px;
+  }

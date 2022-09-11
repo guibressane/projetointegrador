@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(235, 235, 235);
+}
+
+.box {
+    min-height: 17vh;
+    max-width: 50vh;
+    background-color: lightgray;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: auto;
+    word-wrap: break-word;
+}
+
+.imagem {
+    margin: 20px;
+}
+
+.botao {
+    float: right;
+    justify-content: right;
+}
