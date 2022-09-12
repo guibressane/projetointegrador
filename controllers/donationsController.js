@@ -2,7 +2,7 @@ const knex = require("../db/knex");
 
 const create = async (req, res) => {
     const body = req.body;
-    if (!body.product || !body.specification || !body.pickup || !body.quality) return res.status(400).json("Por favor, preencha com seus dados para continuar o cadastro.")
+    if (!body.product || !body.specification || !body.pickup || !body.quality) return res.status(400).json("Por favor, preencha os dados do produto.")
     await knex("donations").insert({ product: body.product, specification: body.specification, pickup: body.pickup, quality: body.quality })
         .then((id) => res.json({ ...body, id: id[0] }))
         .catch((err) => res.status(400).json(err));

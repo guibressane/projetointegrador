@@ -17,6 +17,8 @@
 
     <!-- Customização de CSS  -->
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
 
     <title>Trabalho </title>
   </head>
@@ -34,13 +36,13 @@
 
             <div class="modal-body">
               <label for="modal-email" class="form-label">Seu endereço de email:</label>
-              <input type="text" class="form-control" id="modal-email" placeholder="ex: seuemail@gmail.com">
+              <input id="emailLogin" type="text" class="form-control" id="modal-email" placeholder="ex: seuemail@gmail.com">
               <label class="form-label">Sua senha:</label>
-              <input type="password" class="form-control">
+              <input id="senhaLogin" type="password" class="form-control">
             </div>
 
             <div class="modal-footer">
-              <button class="btn btn-primary">Acessar</button>
+              <button onclick="login()" class="btn btn-primary">Acessar</button>
             </div>
            
           </div>
@@ -61,17 +63,17 @@
             <div class="modal-body">
               <p>Para doar ou receber doações preencha os campos abaixo:</p>
               <label class="form-label">Seu nome:</label>
-              <input type="text" class="form-control">
+              <input id="nome" type="text" class="form-control">
               <label for="modal-email" class="form-label">Seu endereço de email:</label>
-              <input type="text" class="form-control" id="modal-email" placeholder="ex: seuemail@gmail.com">
+              <input id="email" type="text" class="form-control" id="modal-email" placeholder="ex: seuemail@gmail.com">
               <label class="form-label">Sua senha:</label>
-              <input type="password" class="form-control">
+              <input id="senha1" type="password" class="form-control">
               <label class="form-label">Confirme sua senha:</label>
-              <input type="password" class="form-control">
+              <input id="senha2" type="password" class="form-control">
             </div>
 
             <div class="modal-footer">
-              <button class="btn btn-primary" onclick="close">Cadastrar</button>
+              <button class="btn btn-primary" onclick="cadastroRegistration()">Cadastrar</button>
             </div>
            
           </div>
@@ -92,19 +94,19 @@
 
             <div class="modal-body">
               <label class="form-label">O que será doado?</label>
-              <input type="text" class="form-control">
+              <input id="produto" type="text" class="form-control">
               <label class="form-label">Especificações:</label>
-              <input type="text" class="form-control">
+              <input id="especificacao" type="text" class="form-control">
               <label class="form-label">Local de retirada</label>
-              <input type="text" class="form-control">
+              <input id="retirada" type="text" class="form-control">
               <label class="form-label">Estado de conservação</label><br>
-              <input type="radio" id="vehicle" name="vehicle" value="Excelente">
+              <input onclick="qualidade('Excelente')" id="excelente" type="radio" id="vehicle" name="vehicle" value="Excelente">
               <label for="vehicle1"> Excelente </label><br>
-              <input type="radio" id="vehicle" name="vehicle" value="Bom">
+              <input onclick="qualidade('Bom')" id="bom" type="radio" id="vehicle" name="vehicle" value="Bom">
               <label for="vehicle2"> Bom </label><br>
-              <input type="radio" id="vehicle" name="vehicle" value="Regular">
+              <input onclick="qualidade('Regular')" id="regular" type="radio" id="vehicle" name="vehicle" value="Regular">
               <label for="vehicle3"> Regular </label><br>
-              <input type="radio" id="vehicle" name="vehicle" value="Ruim">
+              <input id="ruim" type="radio" id="vehicle" name="vehicle" value="Ruim" onclick="qualidade('Ruim')">
               <label for="vehicle3"> Ruim </label><br>
               <br>
               <form action="upload.php" method="post" enctype="multipart/form-data">
@@ -119,7 +121,7 @@
             </div>
 
             <div class="modal-footer">
-              <button class="btn btn-primary">Enviar</button>
+              <button class="btn btn-primary" onclick="cadastroDonations()">Enviar</button>
             </div>
            
           </div>

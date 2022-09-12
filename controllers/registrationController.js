@@ -8,7 +8,7 @@ const knex = require("../db/knex");
 const create = async (req, res) => {
   const body = req.body;
   if (!body.name || !body.email || !body.password) return res.status(400).json("Por favor, preencha com seus dados para continuar o cadastro.")
-  await knex("registrations").insert({ name: body.name, email: body.email.toLowerCase(), password: body.password })
+  await knex("registrations").insert({ name: body.name, email: body.email, password: body.password })
     .then(() => res.json({ ...body }))
     .catch((err) => {
       if (err.code == 'ER_DUP_ENTRY') res.status(400).json("E-mail já possui cadastro.")
@@ -17,7 +17,7 @@ const create = async (req, res) => {
 };
 
 const read = async (req, res) => {
-  const email = req.body.email.toLowerCase();
+  const email = req.body.email;
   const registration = await knex("registrations").where({ email: email }).first();
   return res.status(200).json(registration || "E-mail não cadastrado.");
 };
