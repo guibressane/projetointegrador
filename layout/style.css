@@ -60,6 +60,16 @@
     border-color: #7fddc2;
   } 
 
+  .btn-primary {
+    background-color: #3faf92;
+    border-color: #3faf92;
+  }
+
+  .btn-primary:hover {
+    background-color: #177c61;
+    border-color: #177c61;
+  }
+
   .form-label {
     margin-top: 1rem;
   }
