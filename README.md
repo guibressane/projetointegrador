@@ -31,6 +31,11 @@ $ npm i
 # Instale o knex globalmente
 $ npm i knex -g
 
+# Altere o password de acordo com sua senha no DB localhost no knexfile
+$ knexfile.js
+
+# Crie um schema no MySQL chamado "project" (sem aspas)
+
 # Cria todas as tabelas do banco de dados
 $ knex migrate:latest
 
@@ -45,5 +50,4 @@ $ index.html
 
 - [Node.js](https://nodejs.org/en/)
 - [Express](https://www.npmjs.com/package/express) 
-- [Mysql2](https://www.npmjs.com/package/mysql2) 
-- [Watson](https://www.npmjs.com/package/ibm-watson)
+- [Mysql2](https://www.npmjs.com/package/mysql2)
